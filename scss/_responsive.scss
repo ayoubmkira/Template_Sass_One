@@ -1,0 +1,74 @@
+
+@include media-md {
+
+    .menu-btn {
+        visibility: hidden;
+    }
+
+    .nav {
+        visibility: visible;
+
+        .menu-nav {
+            height: 4rem;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: flex-end;
+            transform: translateX(0);
+            background-color: transparent;
+
+            &-item {
+                transform: translateX(0);
+
+                .menu-nav-link {
+                    font-size: .9rem;
+                    padding: .5rem .8rem;
+                }
+            }
+        }
+    }
+
+    .projects {
+
+        &-items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .contact{
+
+        &-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+}
+
+@include media-lg {
+
+    .projects {
+
+        &-items {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .contact {
+
+        &-list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+}
+
+@include media-xl {
+
+    .projects {
+
+        &-items {
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 5rem;
+        }
+    }
+
+}

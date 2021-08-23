@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@100;300;400;700&display=swap');
+@import "config";
+@import "home";
+@import "menu";
+@import "about";
+@import "projects";
+@import "contact";
+@import "responsive";
+
+body {
+    font-family: "Georama", Verdana, Tahoma, sans-serif;
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100vh;
+    line-height: 1;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+ul {
+    list-style: none;
+}
+a {
+    color: set-text-color($primary-color);
+    text-decoration: none;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+/* ============== Header */
+header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* ============== Main */
+main {
+    height: 100%;
+    width: 100%;
+
+    .social-icons {
+        position: fixed;
+        left: 1rem;
+        bottom: 1rem;
+
+        a {
+            padding: .3rem;
+            @include transition(color, .3s, ease);
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+/* ============== Paint Colors */
+/*
+.paint-colors {
+    position: fixed;
+    left: 0;
+    top: 40vh;
+    background-color: #FFF;
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: .5rem;
+    transform: translateX(-100%);
+    @include transition(transform, .2s, linear);
+
+    &:hover {
+        transform: translateX(0);
+    }
+
+    .icon {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: #FFF;
+        color: #333;
+        position: absolute;
+        top: 0;
+        right: -1.6rem;
+        line-height: 1.6rem;
+    }
+
+    .colors-color {
+        cursor: pointer;
+        height: 1.2rem;
+        width: 1.2rem;
+        @include transition(box-shadow, .2s, linear);
+
+        &.active,
+        &:hover {
+            box-shadow: 0 0 1px 1px rgba(24, 2, 2, 1);
+        }
+
+        $list-colors: (1, #00bce4) (2, #ff4c4c) (3, #ff0092) (4, #fff000);
+        @each $nth, $color in $list-colors {
+            &:nth-of-type(#{$nth}) {
+                background-color: $color;
+            }
+            &:active {
+                $primary-color: $color;
+            }
+        }
+    }
+}
+*/
+
+/* ============== Footer */
+footer {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0.5rem;
+    right: 1rem;
+    padding: 1rem;
+    color: set-text-color($primary-color);
+}

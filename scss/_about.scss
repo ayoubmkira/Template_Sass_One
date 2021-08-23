@@ -1,0 +1,97 @@
+
+/* ============== About */
+.about {
+    padding-bottom: 1rem;
+
+    &-bio-image {
+        height: 55vh;
+        width: 100%;
+        
+        background: 
+            linear-gradient(
+                to right,
+                rgba($primary-color, .9),
+                rgba($primary-color, .3)
+            ),
+            url('../img/back.jpg') no-repeat;
+        background-position: center top;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        .about-bio {
+            width: 80%;
+
+            .text-secondary {
+                margin-bottom: 2rem;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.3rem;
+                line-height: 1.3;
+            }
+        }
+    }
+
+    .jobs {
+        width: 60vw;
+        margin: 3rem auto;
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            width: 3px;
+            background-color: $secondary-color;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-job {
+            margin-top: 2.5rem;
+            padding: 1.5rem 1rem;
+            background-color: lighten($primary-color, 15%);
+
+            .text-secondary {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 1.2rem;
+                    width: 1.2rem;
+                    background-color: $secondary-color;
+                    top: -2.7rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            h3 {
+                margin: 1.5rem 0 .5rem 0;
+            }
+            h6 {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    .social-icons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        transform-origin: right center;
+        transform: rotate(90deg) translate(1.8rem, 1.2rem);
+    }
+}
